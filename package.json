@@ -1,6 +1,6 @@
 {
   "name": "emlapack",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "BLAS/LAPACK for JavaScript",
   "main": "emlapack.js",
   "types" : "emlapack.d.ts",
@@ -29,6 +29,5 @@
   },
   "homepage": "https://github.com/likr/emlapack",
   "dependencies": {
-    "@types/emscripten": "0.0.30"
   }
 }

@@ -10,7 +10,7 @@ declare namespace Module {
 
     function print(str: string): void;
     function printErr(str: string): void;
-    var arguments: string[];
+    var arguments_: string[];
     var environment: EnvironmentType;
     var preInit: { ():  void }[];
     var preRun: { ():  void }[];
@@ -30,7 +30,7 @@ declare namespace Module {
     var Runtime: any;
 
     function ccall(ident: string, returnType: string, argTypes: string[], args: any[]): any;
-    function cwrap(ident: string, returnType: string, argTypes: string[]): any;
+    function cwrap(ident: string, returnType: string|null, argTypes: string[]): any;
 
     function setValue(ptr: number, value: any, type: string, noSafe?: boolean): void;
     function getValue(ptr: number, type: string, noSafe?: boolean): number;
@@ -91,6 +91,7 @@ declare namespace Module {
 
     function _malloc(size: number): number;
     function _free(ptr: number): void;
+    function setValue(p:number, n:number, type:string):void;
 }
 
 declare namespace FS {
@@ -193,3 +194,5 @@ declare var IDBFS: Emscripten.FileSystemType;
 interface Math {
     imul(a: number, b: number): number;
 }
+
+export default Module;
