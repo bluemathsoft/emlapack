@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "BLAS/LAPACK for JavaScript",
   "main": "emlapack.js",
+  "types" : "emlapack.d.ts",
   "files": [
     "emlapack.js"
   ],
@@ -25,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/likr/emlapack/issues"
   },
-  "homepage": "https://github.com/likr/emlapack"
+  "homepage": "https://github.com/likr/emlapack",
+  "dependencies": {
+    "@types/emscripten": "0.0.30"
+  }
 }
